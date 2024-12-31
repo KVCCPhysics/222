@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-12-30 Mon 22:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lab B1 - DC Circuits</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<base target="_blank">
+<style type="text/css"> blockquote {background:#cdd; padding: 3px 10px; border: 1px solid; }</style>
+<style type="text/css"> .example {background:#FFFCF6; margin-top: -16px;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
+</div>
+<div id="content" class="content">
+<h1 class="title">Lab B1 - DC Circuits</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org54dbd29">1. Basic tools for circuits (20 mins)</a></li>
+<li><a href="#org4921a81">2. Resistors (40 mins)</a></li>
+<li><a href="#orgec7a4f3">3. Capacitors (20 mins)</a></li>
+<li><a href="#org9bc614a">4. Semiconductor devices (40 mins)</a></li>
+</ul>
+</div>
+</div>
+<p>
+In this lab you will explore the basics of electric circuits. There is a whole lot to cover here so lets dig right in.
+</p>
+<div id="outline-container-org54dbd29" class="outline-2">
+<h2 id="org54dbd29"><span class="section-number-2">1.</span> Basic tools for circuits (20 mins)</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+TODO: Take 4 pictures (one for each part) in lab and insert them here
+</p>
+</div>
+<div id="outline-container-org2b7cd88" class="outline-4">
+<h4 id="org2b7cd88">Multimeter</h4>
+<div class="outline-text-4" id="text-org2b7cd88">
+<ul class="org-ul">
+<li><b>Basic measurement device</b> to measure frequently used electrical props</li>
+<li>Measures: voltage, current, resistance, capacitance, etc</li>
+<li><b>Has two modes</b>: high resistance for voltage, resistance, low resistance for current (must break the circuit)</li>
+<li>Rough and tumble device which can be bumped and shoved. Not super expensive ($30-$100+)</li>
+<li>Can measure AC signals but restricted to RMS values (else use an oscilloscope)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21f6598" class="outline-4">
+<h4 id="org21f6598">Power Supply</h4>
+<div class="outline-text-4" id="text-org21f6598">
+<ul class="org-ul">
+<li>Electronic circuit which plugs into <b>wall voltage - DANGER</b> (110V-60Hz AC with a boatload of current) and changes its properties</li>
+<li>Output can be <b>DC</b> (direct current): where voltage is a constant value (ex: +5V for USB)</li>
+<li>Output can be <b>AC</b> (alternating current): keeps its sinusoidal nature. usually reserved for power generation and transmission</li>
+<li>Fancy AC signals are usually created with a different device called a signal generator</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e3b508" class="outline-4">
+<h4 id="org7e3b508">Connectors</h4>
+<div class="outline-text-4" id="text-org7e3b508">
+<ul class="org-ul">
+<li>Wires, cables, clips, crimps, etc. More types than can be described here</li>
+<li><b>Banana clips</b> have a radial spring which makes firm contact for powerful circuit connections</li>
+<li><b>Alligator clips</b> are jaw like clips which use a spring to create contact</li>
+<li><b>BNC connectors</b> are cylindrical clips used for sensitive measurements (push in and twist to connect)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5055b79" class="outline-4">
+<h4 id="org5055b79">Breadboard</h4>
+<div class="outline-text-4" id="text-org5055b79">
+<ul class="org-ul">
+<li>used to create basic circuits and examine output (ex: voltage)</li>
+<li>The breadboard is an <b>educational</b> tool (never used by pros for actual projects) which lets you create and test circuits very quickly. warning: breadboards also have large stray capacitance which is very bad for any circuit containing capacitors.</li>
+<li>Holes on the long edge are connected with a metal clip. The two rows on each long edge are normally reserved for the power bus, one positive potential and one ground.</li>
+<li>Holes in the center (normally 6 holes connected in a row) are used to create the circuit</li>
+<li><b>series connections</b>: circuit elements span each leg between the inner rows, like a leapfrog</li>
+<li><b>parallel connections</b>: circuit elements share a common row with another circuit element, giving multiple routes for current to flow</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org38f20fa" class="outline-4">
+<h4 id="org38f20fa">Other bench devices</h4>
+<div class="outline-text-4" id="text-org38f20fa">
+<ul class="org-ul">
+<li><span class="underline">Soldering station</span> - device used to melt a special metal mixture called <b>solder</b> (tin and lead). This device makes a permanent connection between electrical components. Solder also contains flux which cleans the surface to promote bonding and the fumes are toxic :( You may now see the advantage of using a breadboard.</li>
+<li><span class="underline">Oscilloscope</span> - <b>very important device</b> more sophisticated way to measure <b>voltage</b> and display its behavior as a function of time on a screen. This is the logical extension to a multimeter. This is the most used device of many hardware focused Electrical Engineers.</li>
+<li><span class="underline">Signal Generator</span> - special circuit which can output a voltage which oscillates in time. Output can be <b>sinusoidal</b>, square, sawtooth, or even custom. The <b>frequency</b> is adjustable between 1Hz and 100MHz (1GHz costs $1000, 20GHz costs around $100k). Usually the output voltage/current is weak, so signals must be boosted with other semiconductor circuits.</li>
+<li><span class="underline">LCR Meter</span> - Uses properties of inductor-capacitor-resistor circuit dynamics to more accurately measure passive components. This device leverages the same principles as radios (resonance) to verify components meet design specs.</li>
+<li><span class="underline">Network (spectrum) analyzer</span> - used for designing and testing high-frequency networks, filters, matching circuits, and antenna systems</li>
+<li><span class="underline">Logic analyzer</span> - used for debugging and verifying digital systems (binary circuits where voltage is either high or low)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0bd30d" class="outline-3">
+<h3 id="orgd0bd30d"><span class="section-number-3">1.1.</span> Make your first circuit and measure the voltage</h3>
+<div class="outline-text-3" id="text-1-1">
+<ol class="org-ol">
+<li>Plug in a desktop power supply to the wall outlet. Turn the device on and set the output to DC.</li>
+<li>Use the probes from the multimeter to measure the voltage difference between the DC output. Adjust the output to create a voltage of 9V</li>
+<li>Place R1 and R2 in <b>series</b> on the breadboard so current must go through R1 then R2. (charges are on a single-lane road, no passing)
+<ul class="org-ul">
+<li>Left side of R1 into row1, right side into row5</li>
+<li>left side of R2 into row5, right side into row10</li>
+<li>Then connect power supply between row1 and row10 (skipping over 5)</li>
+<li>This forces the electrons which arrive at row5 to flow through r2 to row10 (series).</li>
+</ul></li>
+<li>Connect the power supply to each end of the circuit (+9V on row1 and Ground on row10 in above example). Congratulations, you have made an electrical circuit!</li>
+<li>use the multimeter to measure the voltage <b>Before continuing, make sure the red probe is connected to the Voltage port at the bottom right</b>. With the circuit &ldquo;on&rdquo; (connected to the power supply) place the multimeter probes over each resistor. First measure \(\Delta V_1\) and then measure \(V_2\)</li>
+</ol>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Sum the two voltages you measured over the individual resistors in step 5. Check to make sure \(\Delta V_1+ \Delta V_2=+9~V\)</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org4921a81" class="outline-2">
+<h2 id="org4921a81"><span class="section-number-2">2.</span> Resistors (40 mins)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Resistors are very cheap devices which are required in almost every circuit. They are simply conductors which have a bit of impurity mixed in, making the substance absorb some of the energy from the flowing electrons, thus heating up. Resistors come in many shapes and sizes as they are used in almost every circuit, but two types are common for standard low power low voltage DC circuits:
+</p>
+</div>
+<div id="outline-container-orgf4ade0f" class="outline-4">
+<h4 id="orgf4ade0f">Thru-hole resistors</h4>
+<div class="outline-text-4" id="text-orgf4ade0f">
+<p>
+These come with two long wires which can be fed through a hole made in a printed circuit board (PCB). Each end can then be soldered (with molten metal!) to the pad of the PCB to make a secure, reliable, and low resistance connection. They normally come with &ldquo;<b>color bands</b>&rdquo; which you can read, but meh this is boring. Conveniently this type also work with a breadboard.
+</p>
+</div>
+</div>
+<div id="outline-container-org7c66458" class="outline-4">
+<h4 id="org7c66458">Surface mount resistors</h4>
+<div class="outline-text-4" id="text-org7c66458">
+<p>
+We will not use these lab, but they are worth mentioning as they are more common for modern circuits. These resistors shed the wires and look like little rectangles, normally with a black band in the center. This type also saves money as no hole is required in the fiberglass PCB.
+</p>
+</div>
+</div>
+<div id="outline-container-org6019bba" class="outline-3">
+<h3 id="org6019bba"><span class="section-number-3">2.1.</span> create a resistor circuit</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>pick 3 resistors of different values. Measure the resistance of each resistor individually (while disconnected) using the multimeter. Set the dial to \(\Omega\) and place the probes across the resistor. (ask for help if confused)
+\[R_1= \qquad \qquad \qquad R_2= \qquad \qquad \qquad R_3=\]</li>
+
+<li>Create a circuit with a combination of series and parallel connections (make your own circuit diagram). For example: connect R1 and R2 end-to-end for series, then attach R3 in parallel with those two. Finally connect one end of the circuit to the voltage source and the other to ground.</li>
+
+<li><p>
+Turn the power supply on and measure the voltage over each resistor. Make sure the probes are connected black-COM and red-V. Switch the multimeter to measure DC Voltage (\(\bar{V}\) is for DC and \(\widetilde{V}\) for AC) and place the probes over each resistor while the circuit is on and connected. Record your findings:
+</p>
+
+<p>
+\[\Delta V_1= \qquad \qquad \qquad \Delta V_2= \qquad \qquad \qquad \Delta V_3=\]
+</p></li>
+
+<li><p>
+Calculate the amount of current using Ohm&rsquo;s Law : \(\Delta V = I \, R\)
+</p>
+
+<p>
+Calculated Values for current:
+</p>
+
+<p>
+\[I_1= \qquad \qquad \qquad I_2= \qquad \qquad \qquad I_3=\]
+</p>
+
+<p>
+<span class="underline">How to measure current:</span> You must <b>break the circuit</b> to measure current! Think of current measurement as analogous to measuring fluid flow in a pipe. To measure flow you can use a &ldquo;flow meter&rdquo; but this meter must be placed in-line with the pipe. You have to cut the pipe open, place the device in, and then reconnect. Multimeters work the same way. You will end up using the probes of the device itself as part of the wiring in the circuit when measuring current this way.
+</p>
+
+<p>
+The multimeter can measure current (I), but mode of operation must be changed by plugging the probe into a different plug. Measurement of high current requires a low resistance device which is accessed by plugging in the probe to the current (10A) port the bottom of the device. <b>Please remember that the multimeter is vulnerable to over-current in this state</b>. The 10A plug has 0-ohm resistance to COM which will allow a power supply to burn up its fuse.
+</p></li>
+
+<li><p>
+Break the circuit at each resistor and measure the current which flows. To measure current through R1, open the wire leading to R1 and place the meter (in current mode) in series where the break was made. <b>ask for help if confused</b>. Record your findings:
+</p>
+
+<p>
+Measured Values for current:
+ \[I_1= \qquad \qquad \qquad I_2= \qquad \qquad \qquad I_3=\]
+</p></li>
+</ol>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Compare the measured and calculated values for current in each part of the circuit</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-orgec7a4f3" class="outline-2">
+<h2 id="orgec7a4f3"><span class="section-number-2">3.</span> Capacitors (20 mins)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+There is quite a variety of types of capacitors. Each type uses a different geometry and/or material to change the way charge is stored.
+</p>
+</div>
+<div id="outline-container-org8298e6f" class="outline-4">
+<h4 id="org8298e6f">(polarized) electrolytic capacitor (1muF to 1F)</h4>
+<div class="outline-text-4" id="text-org8298e6f">
+<p>
+Polarized with a designated positive and negative terminal. wears out mostly because of heat causing a dry-out of the electrolyte. Poor for high frequency AC circuits. Mostly used for the &ldquo;power&rdquo; side of circuits. Avoid use in timing or triggering circuits because of slow dynamics and a self induction effect called &ldquo;dielectric soakage&rdquo; where the cap cannot discharge its entire field.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf01d395" class="outline-4">
+<h4 id="orgf01d395">(unpolarized) Ceramic Disk capacitor (1pF to 500muF)</h4>
+<div class="outline-text-4" id="text-orgf01d395">
+<p>
+Low capacity but highly durable caps which are also somewhat cheap. Simple geometry of a bunch of parallel plates separated by a very hard dielectric (ceramic rock). class 1 (NP0 C0G up to 1muF) are used heavily in RF applications, while class 2  have too much variation in capacitance with voltage and temperature (X7R is somewhat stable, Y5V are cheap but capacitance can vary up to 70% during operation). Avoid cheap ceramics for any sensitive circuits, especially filtering as they change capacitance (and thus the filtered frequency).
+</p>
+</div>
+</div>
+<div id="outline-container-org41afe51" class="outline-4">
+<h4 id="org41afe51">(unpolarized) surface-mount Ceramic Disk capacitor (1pF to 1muF)</h4>
+<div class="outline-text-4" id="text-org41afe51">
+<p>
+Same stuff as above, but slammed into a tiny device. This is the most used cap in actual circuits in the wild.
+</p>
+</div>
+</div>
+<div id="outline-container-org2b4002a" class="outline-4">
+<h4 id="org2b4002a">(unpolarized) Film Capacitors (50pF to 500muF)</h4>
+<div class="outline-text-4" id="text-org2b4002a">
+<p>
+Mostly thru hole type. Tight tolerance and low leakage, stable with temp and voltage. But they are high priced and somewhat low density (larger devices). Sometimes material used to manufacture the caps are hard to identify (mylar/polypropelene/polyester). Not good for high temperature environments because the plastic can melt.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8d8f9e" class="outline-4">
+<h4 id="orgf8d8f9e">(polarized) Tantalum (1muF - 1000muF)</h4>
+<div class="outline-text-4" id="text-orgf8d8f9e">
+<p>
+More reliable long term solution for electrolytics (no wearout). Generally lower voltage than electrolytics. Danger: polarized and if you reverse bias them, they tend to heat up and light on fire!
+</p>
+</div>
+</div>
+<div id="outline-container-org5746f2e" class="outline-4">
+<h4 id="org5746f2e">(unpolarized) Mica Capacitor (1pF -&gt; 10nF)</h4>
+<div class="outline-text-4" id="text-org5746f2e">
+<p>
+Commonly used in RF circuits. Very stable caps but low capacitance and fairly expensive.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdcef221" class="outline-4">
+<h4 id="orgdcef221">Variable Mechanical Capacitors</h4>
+<div class="outline-text-4" id="text-orgdcef221">
+<p>
+Trimmer caps and mechanical variable capacitors are used in radios. Wait for magnetic fields and AC circuits to see why!
+</p>
+</div>
+</div>
+<div id="outline-container-orgf0cf341" class="outline-3">
+<h3 id="orgf0cf341"><span class="section-number-3">3.1.</span> Create a circuit with three capacitors</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<span class="underline">How to discharge a capacitor:</span> Discharge the capacitors by disconnecting from the circuit and using a \(1k-10k\Omega\) resistor to connect each lead together (and also to ground, but you are a reasonable ground for these small caps). The resistor is necessary for large caps to avoid large currents and possible damage to the cap.
+</p>
+
+<ol class="org-ol">
+<li>Gather a combination of three Ceramic Disc capacitors and/or Film Capacitors. You can use electrolytic, but be careful to pay attention to polarity (+ vs -)</li>
+<li>Use the multimeter on the capacitance setting to measure each capacitor. Measured in Farads:  picoFarads(e-12) nanoFarads(e-9) or maybe microFarads(e-6). A large 1-farad electrolytic cap full of charge can be outright dangerous!
+\[C_1= \qquad \qquad \qquad C_2= \qquad \qquad \qquad C_3=\]</li>
+<li>Do not use breadboard or power-supply for this part. Connect all three of the capacitors together in <b>parallel</b> using two separate alligator clips. Do not connect this circuit to the power supply, the multimeter applies its own test signal to make this measurement.</li>
+<li>With the circuit disconnected, use the multimeter to measure the capacitance over all 3 capacitors in parallel
+\[C_{\text{parallel}}=\]</li>
+<li>Do not use breadboard or power-supply for this part. Connect all three of the capacitors together in <b>series</b> using two separate alligator clips. Do not connect this circuit to the power supply, the multimeter applies its own test signal to make this measurement.</li>
+<li>With the circuit disconnected, use the multimeter to measure the capacitance over all 3 capacitors in series
+\[C_{\text{Series}}=\]</li>
+</ol>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Sum the values of each of the three capacitors you had in step 2. Is this sum equivalent to the parallel or series combination?</li>
+<li>Is the value of the series capacitors larger or smaller than each individual capacitor?</li>
+<li>Can you calculate the theoretical value for this equivalent capacitance?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org9bc614a" class="outline-2">
+<h2 id="org9bc614a"><span class="section-number-2">4.</span> Semiconductor devices (40 mins)</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This section is way too large to cover even in a full class, let alone a single lab. This type of device uses quantum effects to do magical things, like make switches with operating frequencies in the gigahertz range (switch on/off 1 billion times per second) or create 1-way wires which blocks current flow in the backwards direction. New applications are commonly discovered, with FETs gaining widespread adoption in the last couple of decades (MOSFET especially). Here are some of the most common devices you will see in the wild:
+</p>
+</div>
+<div id="outline-container-org285eb14" class="outline-4">
+<h4 id="org285eb14">Diode</h4>
+<div class="outline-text-4" id="text-org285eb14">
+<p>
+A single N-P junction which restricts flow of current in only one direction. This restriction of current is induced because of the bias (or voltage) placed across the diode. The N part of the diode has an excess of electrons, and P a lack of electrons (the vacancy of an electron is called a &ldquo;hole&rdquo;).
+</p>
+</div>
+</div>
+<div id="outline-container-org87efbce" class="outline-4">
+<h4 id="org87efbce">LED</h4>
+<div class="outline-text-4" id="text-org87efbce">
+<p>
+Light Emitting Diode is a quantum photon emitter. Think of chemistry, if an electron jumps between orbitals, it emits a photon of a given wavelength (\(E=h\lambda\)). This device does that, but in abundance, and only at one fixed wavelength (one color of light). LED&rsquo;s are diodes, so they only conduct one way.
+</p>
+</div>
+</div>
+<div id="outline-container-orga32ce0e" class="outline-4">
+<h4 id="orga32ce0e">Transistor</h4>
+<div class="outline-text-4" id="text-orga32ce0e">
+<p>
+sandwich of P-N-P or N-P-N junctions which can do many things, including amplification and current based switching. This is the device that changed the world in ~1950 (though many didnt realize it). Has 3 legs which makes it confusing (emitter, collector, and a base in the middle)
+</p>
+</div>
+</div>
+<div id="outline-container-org36f42ec" class="outline-4">
+<h4 id="org36f42ec">Voltage regulator</h4>
+<div class="outline-text-4" id="text-org36f42ec">
+<p>
+Integrated circuit which takes noisy DC voltage and outputs stable DC voltage. Some just throw the extra voltage away as heat (ex: linear regulators) while others try to use the extra energy to increase energy efficiency (ex: buck regulator). Some (ex: boost regulators) even increase DC voltage at the expense of decreasing current.
+</p>
+</div>
+</div>
+<div id="outline-container-org518dbdf" class="outline-4">
+<h4 id="org518dbdf">JFET and MOSFET</h4>
+<div class="outline-text-4" id="text-org518dbdf">
+<p>
+Metal Oxide Layer Field Effect Transistor which does a similar magic as the transistor, but is designed specifically to switch power on and off. This is a voltage controlled switch. Can transfer of crazy amounts of current through a large rectangular 2D layer (60A current capacity is commonplace). FETs are being actively explored and researched as we speak.
+</p>
+</div>
+</div>
+<div id="outline-container-org9a66048" class="outline-4">
+<h4 id="org9a66048">Integrated-Circuit</h4>
+<div class="outline-text-4" id="text-org9a66048">
+<p>
+Specially designed circuit made of silicon which contains another (often sophisticated) circuit. These little circuit packages are the way electronics are designed. Each requirement for the device is satisfied by a chip specially engineered to solve the problem. Developing and manufacturing ICs is the way many electrical engineers earn their salary.
+</p>
+</div>
+</div>
+<div id="outline-container-orga1f48a1" class="outline-3">
+<h3 id="orga1f48a1"><span class="section-number-3">4.1.</span> Create a semiconductor circuit to dim an LED</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div id="orgebac0d3" class="figure">
+<p><img src="./img/labB1_NPN.jpeg" alt="labB1_NPN.jpeg" width="400px" />
+</p>
+</div>
+
+<ol class="org-ol">
+<li>Gather the materials for construction of the circuit: \(500\,\Omega\) resistor, \(5k\Omega\) resistor, an NPN transistor and an LED.</li>
+<li>Use the above circuit diagram to wire up a &ldquo;current switch&rdquo; (we should probably be using a JFET or MOSFET for switching) with the NPN Bipolar Junction Transistor. Take care with connections and note the orientation of the LED and transistor above.</li>
+<li>try to touch the signal to the high voltage. The light should be off by default, but when voltage is applied to the signal wire, the light will turn on.</li>
+<li>Find the instructor to use this switching circuit with a signal generator to make a dimmable LED (like you find in your house).</li>
+</ol>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Create the NPN transistor circuit above to control an LED.</li>
+<li>Use a signal generator to observe the effect of Pulse Width Modulation (PWM).</li>
+</ul>
+</blockquote>
+
+<p>
+On your way out, find an example circuit board and see the types of components used. Look and see what are the most common parts used to make something like a phone or a hard drive.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
