@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-31 Tue 12:05 -->
+<!-- 2025-01-02 Thu 11:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lab B2 - RC Circuit</title>
@@ -238,18 +238,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfd02c77">1. Create your own capacitor (30 mins)</a></li>
-<li><a href="#orgcddc068">2. RC-Circuit with large time constant (30 mins)</a></li>
-<li><a href="#org72334ad">3. Part 3: Oscilloscope (30 mins)</a></li>
-<li><a href="#org09e4582">4. Part 4: Measuring capacitance (30 mins)</a></li>
+<li><a href="#org3980d51">1. Create your own capacitor (30 mins)</a></li>
+<li><a href="#org8c70f92">2. RC-Circuit with large time constant (30 mins)</a></li>
+<li><a href="#orga845bd5">3. Part 3: Oscilloscope (30 mins)</a></li>
+<li><a href="#orgd8f6102">4. Part 4: Measuring capacitance (30 mins)</a></li>
 </ul>
 </div>
 </div>
 <p>
 In this Resistor+Capacitor Circuit lab, we will be messing around with capacitors and using new device called an oscilloscope.
 </p>
-<div id="outline-container-orgfd02c77" class="outline-2">
-<h2 id="orgfd02c77"><span class="section-number-2">1.</span> Create your own capacitor (30 mins)</h2>
+<div id="outline-container-org3980d51" class="outline-2">
+<h2 id="org3980d51"><span class="section-number-2">1.</span> Create your own capacitor (30 mins)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Woo finally some art! Lets make a capacitor. First gather some supplies:
@@ -278,12 +278,12 @@ Woo finally some art! Lets make a capacitor. First gather some supplies:
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgcddc068" class="outline-2">
-<h2 id="orgcddc068"><span class="section-number-2">2.</span> RC-Circuit with large time constant (30 mins)</h2>
+<div id="outline-container-org8c70f92" class="outline-2">
+<h2 id="org8c70f92"><span class="section-number-2">2.</span> RC-Circuit with large time constant (30 mins)</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org9c50cdd" class="outline-3">
-<h3 id="org9c50cdd"><span class="section-number-3">2.1.</span> Charging a capacitor</h3>
+<div id="outline-container-orgc78de25" class="outline-3">
+<h3 id="orgc78de25"><span class="section-number-3">2.1.</span> Charging a capacitor</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Capacitors are storage tanks for charge. If you place a resistor and a capacitor in series with one another, the charge separated by the capacitor will try to flow, but the resistor impedes the flow which slows it down. The differential equation for charging is found using Kirchoff&rsquo;s loop law on the series RC-Circuit:
@@ -306,8 +306,8 @@ where \(Q_{0}\) is the maximum charge of the capacitor at the given supply volta
 </p>
 </div>
 </div>
-<div id="outline-container-org040760a" class="outline-3">
-<h3 id="org040760a"><span class="section-number-3">2.2.</span> Discharging a capacitor</h3>
+<div id="outline-container-org689bc14" class="outline-3">
+<h3 id="org689bc14"><span class="section-number-3">2.2.</span> Discharging a capacitor</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Discharging is exactly the same procedure, except you dont need to worry about the battery EMF \(\mathcal{E}\). The Kirchoff&rsquo;s loop law in differential equation becomes
@@ -322,12 +322,12 @@ This is more clearly seperable (all the Q and dQ goes to one side all the t and 
 </p>
 
 <p>
-\[\Delta Q_{-}(t) = \Delta Q_{0} \left( \exp \left( \frac{-t}{RC}\right) \right)\]
+\[\Delta Q_{-}(t) = \Delta Q_{0} \exp \left( \frac{-t}{RC} \right)\]
 </p>
 </div>
 </div>
-<div id="outline-container-org24d64a5" class="outline-3">
-<h3 id="org24d64a5"><span class="section-number-3">2.3.</span> Design the circuit</h3>
+<div id="outline-container-org7de35c4" class="outline-3">
+<h3 id="org7de35c4"><span class="section-number-3">2.3.</span> Design the circuit</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Choose circuit elements which allows the discharge to happen slowly. Pick a large capacitor (holds lots of charge) and pick a large resistor (hard to push the charge thru), then watch the discharge happen slowly on a multimeter.
@@ -360,15 +360,15 @@ Start by finding a medium-large electrolytic capacitor. These capacitors are pol
 </div>
 </div>
 </div>
-<div id="outline-container-org72334ad" class="outline-2">
-<h2 id="org72334ad"><span class="section-number-2">3.</span> Part 3: Oscilloscope (30 mins)</h2>
+<div id="outline-container-orga845bd5" class="outline-2">
+<h2 id="orga845bd5"><span class="section-number-2">3.</span> Part 3: Oscilloscope (30 mins)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 There are SOO many different oscilloscopes. Useful oscilloscopes cost ~$300 currently (like we are using today), but professionals will normally use multiple thousand dollar scopes on an electronics bench. The difference normally being higher bandwidth (to look at faster signals) and a larger display. The branding on the top almost always lists the fastest frequency the scope can resolve (100MHz+ is standard currently)
 </p>
 
 
-<div id="org6cf6c8e" class="figure">
+<div id="org0689b2c" class="figure">
 <p><img src="./img/labB1_rigol.jpeg" alt="labB1_rigol.jpeg" width="700px" />
 </p>
 </div>
@@ -419,8 +419,8 @@ Now clip the probe on channel 1 to the signal generator and measure the signal:
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org09e4582" class="outline-2">
-<h2 id="org09e4582"><span class="section-number-2">4.</span> Part 4: Measuring capacitance (30 mins)</h2>
+<div id="outline-container-orgd8f6102" class="outline-2">
+<h2 id="orgd8f6102"><span class="section-number-2">4.</span> Part 4: Measuring capacitance (30 mins)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Now lets put this all together and make a measurement of capacitance. As you saw above, a charged capacitor will discharge through the resistor with an exponential curve in time. For smaller caps, these charge and discharge cycles do not take a full minute to complete. Often the caps will charge in a microsecond (10<sup>-6</sup> s). This is too fast for a multimeter to ever see, but the oscilloscope can easily resolve this signal.

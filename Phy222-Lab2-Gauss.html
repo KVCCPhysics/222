@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-29 Sun 17:24 -->
+<!-- 2025-01-02 Thu 11:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lab A2 Gauss' Law</title>
@@ -237,13 +237,13 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5fe6cc5">1. Part 1: Calculate the Electric Force</a></li>
-<li><a href="#org22a0c9a">2. Part 2: Calculate the Electric Field</a></li>
+<li><a href="#org7eb2795">1. Part 1: Calculate the Electric Force</a></li>
+<li><a href="#orgb5ab82d">2. Part 2: Calculate the Electric Field</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5fe6cc5" class="outline-2">
-<h2 id="org5fe6cc5"><span class="section-number-2">1.</span> Part 1: Calculate the Electric Force</h2>
+<div id="outline-container-org7eb2795" class="outline-2">
+<h2 id="org7eb2795"><span class="section-number-2">1.</span> Part 1: Calculate the Electric Force</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The first half of the lab outlines an algorithmic approach to calculation of electric force from point charges. At the end of this section you will also create a Electric Field stream plot for your three charge system.
@@ -261,8 +261,8 @@ The first half of the lab outlines an algorithmic approach to calculation of ele
 <b><b>Free Body Diagrams</b></b>: It is good practice to create a Free Body Diagrams (FBD) of the Coulomb force on each of the charges. Remember the following rules: Forces have a <b><b>magnitude</b></b> and <b><b>direction</b></b>, which are displayed length and direction of an arrow on the FBD. \(r\) is the straight-line distance between the charges. Magnitude of coulomb force: \(F = k_e\frac{q~Q}{r^2}\). Direction of coulomb force: like charge repels, opposite attracts.
 </p>
 </div>
-<div id="outline-container-orgc7bf5e8" class="outline-3">
-<h3 id="orgc7bf5e8"><span class="section-number-3">1.1.</span> Part 1A: Choose some point charges</h3>
+<div id="outline-container-org6063005" class="outline-3">
+<h3 id="org6063005"><span class="section-number-3">1.1.</span> Part 1A: Choose some point charges</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 \[ \vec{F} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 \, q_2}{|\vec{r}|^2}\hat{r}\]
@@ -284,8 +284,8 @@ Choose three random locations for the three charges on the below chart (try to c
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org5b1fd41" class="outline-3">
-<h3 id="org5b1fd41"><span class="section-number-3">1.2.</span> Part 1B: Calculate things using trig</h3>
+<div id="outline-container-org2581103" class="outline-3">
+<h3 id="org2581103"><span class="section-number-3">1.2.</span> Part 1B: Calculate things using trig</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Find the distance and angle between each of the charges using trigonometry. This distance is the magnitude \(|\vec{r}|\). The vector \(\vec{r}_{12}\) signifies the displacement starting from charge 1 and ending at charge 2. The angle \(\theta_{12}\) is the angle starting at 1 and pointing at 2, measured from the positive x-axis in the counterclockwise direction.
@@ -337,8 +337,8 @@ Now you can solve directly for the Electric Force on charge 1 by applying the <b
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgcfe31ee" class="outline-3">
-<h3 id="orgcfe31ee"><span class="section-number-3">1.3.</span> Part 1C: Calculate the force on charge 1 using a python script:</h3>
+<div id="outline-container-org51169a5" class="outline-3">
+<h3 id="org51169a5"><span class="section-number-3">1.3.</span> Part 1C: Calculate the force on charge 1 using a python script:</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #e45649;">import</span> numpy <span style="color: #e45649;">as</span> np
@@ -375,8 +375,8 @@ This algorithmic method of calculating the forces on the charges can easily be s
 </div>
 </div>
 </div>
-<div id="outline-container-org22a0c9a" class="outline-2">
-<h2 id="org22a0c9a"><span class="section-number-2">2.</span> Part 2: Calculate the Electric Field</h2>
+<div id="outline-container-orgb5ab82d" class="outline-2">
+<h2 id="orgb5ab82d"><span class="section-number-2">2.</span> Part 2: Calculate the Electric Field</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 You may want to create a picture the electric field due to a set of charges (think of the dipole ). This field is a mathematical abstraction to show the direction of the force which would act on a hypothetical charge. Lets see how to calculate the E-Field
@@ -390,8 +390,8 @@ You may want to create a picture the electric field due to a set of charges (thi
 Compare this equation to the Force equation above. They are almost exactly the same. The only difference is the E-Field equation is missing the second charge. This means we will not be able to calculate the force at a charge anymore, instead we will calculate the field at an arbitrary point \(P\).
 </p>
 </div>
-<div id="outline-container-org1695e89" class="outline-3">
-<h3 id="org1695e89"><span class="section-number-3">2.1.</span> Part 2A: Choose a point P to calculate E-Field</h3>
+<div id="outline-container-org7075a81" class="outline-3">
+<h3 id="org7075a81"><span class="section-number-3">2.1.</span> Part 2A: Choose a point P to calculate E-Field</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Take your original charge configuration and choose another (4th) point \(P\) where you are going to calculate the electric field. Again try to pick a point which seems interesting to the group.
@@ -409,8 +409,8 @@ Take your original charge configuration and choose another (4th) point \(P\) whe
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org18956e7" class="outline-3">
-<h3 id="org18956e7"><span class="section-number-3">2.2.</span> Part 2B: Shifting the origin</h3>
+<div id="outline-container-orgcaf39fc" class="outline-3">
+<h3 id="orgcaf39fc"><span class="section-number-3">2.2.</span> Part 2B: Shifting the origin</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 For a computer calculation, it is useful to move the origin to the point P which is located at point x0 in the x-dir and y0 in the y-dir. Lets define a new vector \(\vec{r}_0\) (r-naught) which encodes this shift of coordinates:
@@ -468,9 +468,9 @@ You have all these parts, plug them all in and calculate the E field at your cho
 </ul>
 </blockquote>
 </div>
-<div id="outline-container-orgd02f8c3" class="outline-4">
-<h4 id="orgd02f8c3">Part 1.2: Using a program to calculate the Electric Field</h4>
-<div class="outline-text-4" id="text-orgd02f8c3">
+<div id="outline-container-org17615b9" class="outline-4">
+<h4 id="org17615b9">Part 1.2: Using a program to calculate the Electric Field</h4>
+<div class="outline-text-4" id="text-org17615b9">
 <p>
 Wowza, that is a tedious calculation, but tedious is great for a computer! Lets write a program to do the tedious parts
 </p>
@@ -494,8 +494,8 @@ Wowza, that is a tedious calculation, but tedious is great for a computer! Lets 
 </div>
 </div>
 </div>
-<div id="outline-container-org9d50ca0" class="outline-3">
-<h3 id="org9d50ca0"><span class="section-number-3">2.3.</span> Part 3: Examining Gauss&rsquo; Law</h3>
+<div id="outline-container-org7f1d8e9" class="outline-3">
+<h3 id="org7f1d8e9"><span class="section-number-3">2.3.</span> Part 3: Examining Gauss&rsquo; Law</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 In the next part of this lab, you will think through the the concept of electric flux, and try to build your intuition around Gauss&rsquo; Law (closed surface containing charge). The electric field could be measured using a Gauss Meter (or qualitatively with electroscope), but an accurate measurement requires somewhat extreme isolation (instead, it is easier to measure Electric Potential, but that is saved for the next lab).
@@ -517,9 +517,9 @@ In the next part of this lab, you will think through the the concept of electric
 \[\Phi_E = \int \vec{E} \cdot \hat{n} dA = \frac{q_{in}}{\varepsilon_0} \qquad \qquad \qquad \Phi_E = E \, A \, \cos(\theta) = \frac{q_{in}}{\varepsilon_0}\]
 </p>
 </div>
-<div id="outline-container-orgb73d1a5" class="outline-4">
-<h4 id="orgb73d1a5">Part 2.1: Flux from a point charge</h4>
-<div class="outline-text-4" id="text-orgb73d1a5">
+<div id="outline-container-org8794472" class="outline-4">
+<h4 id="org8794472">Part 2.1: Flux from a point charge</h4>
+<div class="outline-text-4" id="text-org8794472">
 <p>
 Create a sketch of the electric field for a point charge (you choose the sign). Recall the field lines start at positive charge and end at negative charge.
 </p>
@@ -540,9 +540,9 @@ Note: A &ldquo;Gaussian Surface&rdquo; is an imaginary fully enclosed object whi
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org33b08a6" class="outline-4">
-<h4 id="org33b08a6">Part 2.2: Charge outside of the surface</h4>
-<div class="outline-text-4" id="text-org33b08a6">
+<div id="outline-container-org8bfc39a" class="outline-4">
+<h4 id="org8bfc39a">Part 2.2: Charge outside of the surface</h4>
+<div class="outline-text-4" id="text-org8bfc39a">
 <p>
 Now create a Gaussian enclosed surface with no charge inside. Now place a charge just outside of that surface and draw the field lines.
 </p>
@@ -560,9 +560,9 @@ Now create a Gaussian enclosed surface with no charge inside. Now place a charge
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgca0f57b" class="outline-4">
-<h4 id="orgca0f57b">Part 2.3: Dipole</h4>
-<div class="outline-text-4" id="text-orgca0f57b">
+<div id="outline-container-orgfeb3b3b" class="outline-4">
+<h4 id="orgfeb3b3b">Part 2.3: Dipole</h4>
+<div class="outline-text-4" id="text-orgfeb3b3b">
 <p>
 A dipole is created when two equal but opposite charges are separated by a distance. Draw the electric field at point P (use the principle of superposition).
 </p>
@@ -587,9 +587,9 @@ Draw a circle which encloses both charges. This will be your Gaussian surface. A
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgcd4a079" class="outline-4">
-<h4 id="orgcd4a079">Part 2.4: Conducting Spherical Shell</h4>
-<div class="outline-text-4" id="text-orgcd4a079">
+<div id="outline-container-orgf91c670" class="outline-4">
+<h4 id="orgf91c670">Part 2.4: Conducting Spherical Shell</h4>
+<div class="outline-text-4" id="text-orgf91c670">
 <p>
 Recall: Conductors in electrostatic equilibrium MUST have ZERO Electric Field inside. If there is a field, the charges will feel the force and move around until they reach equilibrium.
 </p>

@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-29 Sun 13:35 -->
+<!-- 2025-01-05 Sun 19:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Phy222 Homework C - Magnetic Field</title>
+<title>Phy222 Homework 8-11 - Magnetic Field</title>
 <meta name="author" content="Patrick Malsom" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -193,43 +193,734 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">Phy222 Homework C - Magnetic Field</h1>
-<div id="outline-container-org569dea2" class="outline-2">
-<h2 id="org569dea2">Week 1: Magnetic Fields</h2>
-<div class="outline-text-2" id="text-org569dea2">
+<h1 class="title">Phy222 Homework 8-11 - Magnetic Field</h1>
+<div id="outline-container-org17bfb4a" class="outline-2">
+<h2 id="org17bfb4a">Homework 8: Magnetic Fields</h2>
+<div class="outline-text-2" id="text-org17bfb4a">
 </div>
-<div id="outline-container-org5a7083d" class="outline-3">
-<h3 id="org5a7083d">Problem C.1.1</h3>
-</div>
-</div>
-<div id="outline-container-orge185847" class="outline-2">
-<h2 id="orge185847">Week 2: Continuous Current Distributions</h2>
-<div class="outline-text-2" id="text-orge185847">
-</div>
-<div id="outline-container-orgc70ea89" class="outline-3">
-<h3 id="orgc70ea89">Problem C.2.1</h3>
-</div>
-</div>
-<div id="outline-container-orgf089c12" class="outline-2">
-<h2 id="orgf089c12">Week 3: Induction</h2>
-<div class="outline-text-2" id="text-orgf089c12">
-</div>
-<div id="outline-container-org86d374d" class="outline-3">
-<h3 id="org86d374d">Problem C.3.1</h3>
+<div id="outline-container-org285d8d2" class="outline-3">
+<h3 id="org285d8d2">Problem 8.1</h3>
+<div class="outline-text-3" id="text-org285d8d2">
+<p>
+What is the direction of the magnetic force on a positive charge that moves as shown in each of the six cases?
+</p>
+
+
+<div id="org5e63b11" class="figure">
+<p><img src="./img/hwC1_fig1.jpeg" alt="hwC1_fig1.jpeg" width="400px" />
+</p>
 </div>
 </div>
-<div id="outline-container-org75c7432" class="outline-2">
-<h2 id="org75c7432">Week 4: AC Circuits</h2>
-<div class="outline-text-2" id="text-org75c7432">
 </div>
-<div id="outline-container-orgf63a74d" class="outline-3">
-<h3 id="orgf63a74d">Problem C.4.1</h3>
+<div id="outline-container-org27c822a" class="outline-3">
+<h3 id="org27c822a">Problem 8.2</h3>
+<div class="outline-text-3" id="text-org27c822a">
+<p>
+What is the direction of the velocity of a negative charge that experiences the magnetic force shown in each of the three cases, assuming it moves perpendicular to B?
+</p>
+
+
+<div id="orgcb42517" class="figure">
+<p><img src="./img/hwC1_fig2.jpeg" alt="hwC1_fig2.jpeg" width="350px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f8c3e5" class="outline-3">
+<h3 id="org3f8c3e5">Problem 8.3</h3>
+<div class="outline-text-3" id="text-org3f8c3e5">
+<p>
+An electron is projected into a uniform magnetic field \(\mathbf{B} = (0.5\hat{i} + 0.8\hat{k}) \, \mathrm{T}\) with a velocity \(\mathbf{v} = (3.0\hat{i} + 4.0\hat{j}) \times 10^6 \, \mathrm{m/s}\). What is the magnetic force on the electron?
+</p>
+</div>
+</div>
+<div id="outline-container-org7442b5a" class="outline-3">
+<h3 id="org7442b5a">Problem 8.4</h3>
+<div class="outline-text-3" id="text-org7442b5a">
+<p>
+Four different proton velocities are given. For each case, determine the magnetic force on the proton in terms of \(e\), \(v_0\), and \(B_0\).
+</p>
+
+
+<div id="orgdd20efe" class="figure">
+<p><img src="./img/hwC1_fig5.jpeg" alt="hwC1_fig5.jpeg" width="300px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org764c009" class="outline-3">
+<h3 id="org764c009">Problem 8.5</h3>
+<div class="outline-text-3" id="text-org764c009">
+<p>
+Aircraft sometimes acquire small static charges. Suppose a supersonic jet has a \(0.500 \, \mu\mathrm{C}\) charge and flies due west at a speed of \(660. \, \mathrm{m/s}\) over Earth’s south magnetic pole, where the \(8.00 \times 10^{-5} \, \mathrm{T}\) magnetic field points straight down into the ground.
+</p>
+
+<ol class="org-ol">
+<li>What are the direction and the magnitude of the magnetic force on the plane?</li>
+<li>Discuss whether the value obtained above implies this is a significant or negligible effect.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd142edf" class="outline-3">
+<h3 id="orgd142edf">Problem 8.6</h3>
+<div class="outline-text-3" id="text-orgd142edf">
+<p>
+A cosmic-ray electron moves at \(7.5 \times 10^6 \, \mathrm{m/s}\) perpendicular to Earth’s magnetic field at an altitude where the field strength is \(1.0 \times 10^{-5} \, \mathrm{T}\). What is the radius of the circular path the electron follows?
+</p>
+</div>
+</div>
+<div id="outline-container-orgc0f232b" class="outline-3">
+<h3 id="orgc0f232b">Problem 8.7</h3>
+<div class="outline-text-3" id="text-orgc0f232b">
+<p>
+An alpha-particle (\(m = 6.64 \times 10^{-27} \, \mathrm{kg}\), \(q = 3.2 \times 10^{-19} \, \mathrm{C}\)) travels in a circular path of radius \(25 \, \mathrm{cm}\) in a uniform magnetic field of magnitude \(1.5 \, \mathrm{T}\).
+</p>
+
+<ol class="org-ol">
+<li>What is the speed of the particle?</li>
+<li>What is the kinetic energy in electron-volts?</li>
+<li>Through what potential difference must the particle be accelerated in order to give it this kinetic energy?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org256729a" class="outline-3">
+<h3 id="org256729a">Problem 8.8</h3>
+<div class="outline-text-3" id="text-org256729a">
+<p>
+What is the direction of the magnetic force on the current in each of the six cases?
+</p>
+
+
+<div id="orgac43aba" class="figure">
+<p><img src="./img/hwC1_fig3.jpeg" alt="hwC1_fig3.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org306747c" class="outline-3">
+<h3 id="org306747c">Problem 8.9</h3>
+<div class="outline-text-3" id="text-org306747c">
+<p>
+What is the direction of the magnetic field that produces the magnetic force shown on the currents in each of the three cases, assuming B  is perpendicular to I?
+</p>
+
+
+<div id="orgc331e66" class="figure">
+<p><img src="./img/hwC1_fig4.jpeg" alt="hwC1_fig4.jpeg" width="300px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org247b9fb" class="outline-3">
+<h3 id="org247b9fb">Problem 8.10</h3>
+<div class="outline-text-3" id="text-org247b9fb">
+<p>
+A dc power line for a light-rail system carries \(1000 \, \mathrm{A}\) at an angle of \(30.0^\circ\) to Earth’s \(5.0 \times 10^{-5} \, \mathrm{T}\) field.
+</p>
+<ol class="org-ol">
+<li>What is the force on a \(100 \, \mathrm{m}\) section of this line?</li>
+<li>Discuss practical concerns this presents, if any.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6c1b0e0" class="outline-3">
+<h3 id="org6c1b0e0">Problem 8.11</h3>
+<div class="outline-text-3" id="text-org6c1b0e0">
+<p>
+A $150$-turn square loop of wire \(18.0 \, \mathrm{cm}\) on a side that carries a \(50.0 \, \mathrm{A}\) current in a \(1.60 \, \mathrm{T}\) field?
+</p>
+
+<ol class="org-ol">
+<li>What is the maximum torque felt by the loop?</li>
+<li>What is the torque when \(\theta\) is \(10.9^\circ\)?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org43897a9" class="outline-3">
+<h3 id="org43897a9">Problem 8.12</h3>
+<div class="outline-text-3" id="text-org43897a9">
+<p>
+A wire of length \(1.0 \, \mathrm{m}\) is wound into a single-turn planar loop. The loop carries a current of \(5.0 \, \mathrm{A}\), and it is placed in a uniform magnetic field of strength \(0.25 \, \mathrm{T}\).
+</p>
+
+<ol class="org-ol">
+<li>What is the maximum torque that the loop will experience if it is square?</li>
+<li>If it is circular?</li>
+<li>At what angle relative to \(\mathbf{B}\) would the normal to the circular coil have to be oriented so that the torque on it would be the same as the maximum torque on the square coil?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8729139" class="outline-3">
+<h3 id="org8729139">Problem 8.13</h3>
+<div class="outline-text-3" id="text-org8729139">
+<p>
+A proton has a magnetic field due to its spin. The field is similar to that created by a circular current loop of radius \(0.65 \times 10^{-15} \, \mathrm{m}\) with a current of \(1.05 \times 10^4 \, \mathrm{A}\). Find the maximum torque on a proton in a \(2.50 \, \mathrm{T}\) field. (This is a significant torque on a small particle.)
+</p>
+</div>
+</div>
+<div id="outline-container-orga96e815" class="outline-3">
+<h3 id="orga96e815">Problem 8.14</h3>
+<div class="outline-text-3" id="text-orga96e815">
+<p>
+A physicist is designing a cyclotron to accelerate protons to one-tenth the speed of light. The magnetic field will have a strength of \(1.5 \, \mathrm{T}\). Determine
+</p>
+
+<ol class="org-ol">
+<li>the rotational period of the circulating protons.</li>
+<li>the maximum radius of the protons’ orbit.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org58ab098" class="outline-3">
+<h3 id="org58ab098">Problem 8.15</h3>
+<div class="outline-text-3" id="text-org58ab098">
+<p>
+The magnetic field in a cyclotron is \(1.25 \, \mathrm{T}\), and the maximum orbital radius of the circulating protons is \(0.40 \, \mathrm{m}\).
+</p>
+<ol class="org-ol">
+<li>What is the kinetic energy of the protons when they are ejected from the cyclotron?</li>
+<li>What is this energy in \(\mathrm{MeV}\)?</li>
+<li>Through what potential difference would a proton have to be accelerated to acquire this kinetic energy?</li>
+<li>What is the period of the voltage source used to accelerate the protons?</li>
+<li>Repeat the calculations for alpha-particles.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb02408f" class="outline-3">
+<h3 id="orgb02408f">Problem 8.16</h3>
+<div class="outline-text-3" id="text-orgb02408f">
+<p>
+A velocity selector in a mass spectrometer uses a \(0.100 \, \mathrm{T}\) magnetic field.
+</p>
+
+<ol class="org-ol">
+<li>What electric field strength is needed to select a speed of \(4.0 \times 10^6 \, \mathrm{m/s}\)?</li>
+<li>What is the voltage between the plates if they are separated by \(1.00 \, \mathrm{cm}\)?</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org17327f6" class="outline-2">
+<h2 id="org17327f6">Homework 9: Continuous Current Distributions</h2>
+<div class="outline-text-2" id="text-org17327f6">
+</div>
+<div id="outline-container-org80c935e" class="outline-3">
+<h3 id="org80c935e">Problem 9.1</h3>
+<div class="outline-text-3" id="text-org80c935e">
+<p>
+A 10-A current flows through the wire shown. What is the magnitude of the magnetic field due to a 0.5-mm segment of wire as measured at point A and point B?
+</p>
+
+
+<div id="org9915e9d" class="figure">
+<p><img src="./img/hwC2_fig1.jpeg" alt="hwC2_fig1.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c11545" class="outline-3">
+<h3 id="org9c11545">Problem 9.2</h3>
+<div class="outline-text-3" id="text-org9c11545">
+<p>
+The accompanying figure shows a current loop consisting of two concentric circular arcs and two perpendicular radial lines. Determine the magnetic field at point P.
+</p>
+
+
+<div id="org9bae7ab" class="figure">
+<p><img src="./img/hwC2_fig2.jpeg" alt="hwC2_fig2.jpeg" width="200px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7d762e0" class="outline-3">
+<h3 id="org7d762e0">Problem 9.3</h3>
+<div class="outline-text-3" id="text-org7d762e0">
+<p>
+Find the magnetic field at the center C of the rectangular loop of wire shown in the accompanying figure.
+</p>
+
+
+
+<div id="orgad801fc" class="figure">
+<p><img src="./img/hwC2_fig3.jpeg" alt="hwC2_fig3.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb9dfd10" class="outline-3">
+<h3 id="orgb9dfd10">Problem 9.4</h3>
+<div class="outline-text-3" id="text-orgb9dfd10">
+<p>
+A typical current in a lightning bolt is \(10^4~A\). Estimate the magnetic field \(1~m\) from the bolt.
+</p>
+</div>
+</div>
+<div id="outline-container-org3dcdf8b" class="outline-3">
+<h3 id="org3dcdf8b">Problem 9.5</h3>
+<div class="outline-text-3" id="text-org3dcdf8b">
+<p>
+The below figure shows two long, straight, horizontal wires that are parallel and a distance 2a apart. If both wires carry current I in the same direction, what is the magnetic field at P1 and P2?
+</p>
+
+
+<div id="orgd4e1546" class="figure">
+<p><img src="./img/hwC2_fig4.jpeg" alt="hwC2_fig4.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb172c25" class="outline-3">
+<h3 id="orgb172c25">Problem 9.6</h3>
+<div class="outline-text-3" id="text-orgb172c25">
+<p>
+Repeat the calculations of the preceding problem with the direction of the current in the lower wire reversed.
+</p>
+</div>
+</div>
+<div id="outline-container-org4f89789" class="outline-3">
+<h3 id="org4f89789">Problem 9.7</h3>
+<div class="outline-text-3" id="text-org4f89789">
+<p>
+Three long, straight, parallel wires, all carrying \(I=20~A\), are positioned as shown in the below figure. What is the magnitude of the magnetic field at the point P?
+</p>
+
+
+
+<div id="orge6a5e10" class="figure">
+<p><img src="./img/hwC2_fig5.jpeg" alt="hwC2_fig5.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb0e0c59" class="outline-3">
+<h3 id="orgb0e0c59">Problem 9.8</h3>
+<div class="outline-text-3" id="text-orgb0e0c59">
+<p>
+Two long, parallel wires are hung by cords of length \(5.0~cm\), as shown in the accompanying figure. Each wire has a mass per unit length of \(30~g/m\), and they carry the same current in opposite directions. What is the current if the cords hang at \(6.0^\circ\) with respect to the vertical?
+</p>
+
+
+<div id="org35b03fd" class="figure">
+<p><img src="./img/hwC2_fig6.jpeg" alt="hwC2_fig6.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc605ee9" class="outline-3">
+<h3 id="orgc605ee9">Problem 9.9</h3>
+<div class="outline-text-3" id="text-orgc605ee9">
+<p>
+When the current through a circular loop is \(6.0 \, \mathrm{A}\), the magnetic field at its center is \(2.0 \times 10^{-4} \, \mathrm{T}\). What is the radius of the loop?
+</p>
+</div>
+</div>
+<div id="outline-container-org8bfe61f" class="outline-3">
+<h3 id="org8bfe61f">Problem 9.10</h3>
+<div class="outline-text-3" id="text-org8bfe61f">
+<p>
+A flat, circular loop has \(20\) turns. The radius of the loop is \(10.0 \, \mathrm{cm}\) and the current through the wire is \(0.50 \, \mathrm{A}\). Determine the magnitude of the magnetic field at the center of the loop.
+</p>
+</div>
+</div>
+<div id="outline-container-org1012565" class="outline-3">
+<h3 id="org1012565">Problem 9.11</h3>
+<div class="outline-text-3" id="text-org1012565">
+<p>
+Evaluate \(\oint \mathbf{B} \cdot d\mathbf{l}\) (line integral) for each of the cases shown in the accompanying figure.
+</p>
+
+
+<div id="org00b17f1" class="figure">
+<p><img src="./img/hwC2_fig7.jpeg" alt="hwC2_fig7.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org76a3460" class="outline-3">
+<h3 id="org76a3460">Problem 9.12</h3>
+<div class="outline-text-3" id="text-org76a3460">
+<p>
+A portion of a long, cylindrical coaxial cable is shown in the accompanying figure. A current \(I\) flows down the center conductor, and this current is returned in the outer conductor. Determine the magnetic field in the regions (a) \(r \leq r_1\), (b) \(r_2 \geq r \geq r_1\), (c) \(r_3 \geq r \geq r_2\), and (d) \(r \geq r_3\). Assume that the current is distributed uniformly over the cross sections of the two parts of the cable.
+</p>
+
+
+
+<div id="org77b8bfa" class="figure">
+<p><img src="./img/hwC2_fig8.jpeg" alt="hwC2_fig8.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org13184aa" class="outline-2">
+<h2 id="org13184aa">Homework 10: Induction</h2>
+<div class="outline-text-2" id="text-org13184aa">
+</div>
+<div id="outline-container-org1f1e22c" class="outline-3">
+<h3 id="org1f1e22c">Problem 10.1</h3>
+<div class="outline-text-3" id="text-org1f1e22c">
+<p>
+A 50-turn coil has a diameter of \(15 \, \text{cm}\). The coil is placed in a spatially uniform magnetic field of magnitude \(0.50 \, \text{T}\) so that the face of the coil and the magnetic field are perpendicular. Find the magnitude of the emf induced in the coil if the magnetic field is reduced to zero uniformly in
+</p>
+<ol class="org-ol">
+<li>\(0.10 \, \text{s}\)</li>
+<li>\(1.0 \, \text{s}\)</li>
+<li>\(60 \, \text{s}\).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org38fcb8d" class="outline-3">
+<h3 id="org38fcb8d">Problem 10.2</h3>
+<div class="outline-text-3" id="text-org38fcb8d">
+<p>
+The magnetic field through a circular loop of radius 10.0 cm varies with time as shown below. The field is perpendicular to the loop. Plot the magnitude of the induced emf in the loop as a function of time.
+</p>
+
+
+<div id="orga362ca7" class="figure">
+<p><img src="./img/hwC3_fig1.jpeg" alt="hwC3_fig1.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7f82fea" class="outline-3">
+<h3 id="org7f82fea">Problem 10.3</h3>
+<div class="outline-text-3" id="text-org7f82fea">
+<p>
+A current is induced in a circular loop of radius \(1.5 \, \text{cm}\) between two poles of a horseshoe electromagnet when the current in the electromagnet is varied. The magnetic field in the area of the loop is perpendicular to the area and has a uniform magnitude. If the rate of change of magnetic field is \(10 \, \text{T/s}\), find the magnitude and direction of the induced current if the resistance of the loop is \(25 \, \Omega\).
+</p>
+</div>
+</div>
+<div id="outline-container-org8e0a0ef" class="outline-3">
+<h3 id="org8e0a0ef">Problem 10.4</h3>
+<div class="outline-text-3" id="text-org8e0a0ef">
+<p>
+A coil with \(50\) turns and area \(10 \, \text{cm}^2\) is oriented with its plane perpendicular to a \(0.75 \, \text{T}\) magnetic field. If the coil is flipped over (rotated through \(180^\circ\)) in \(0.20 \, \text{s}\), what is the average emf induced in it?
+</p>
+</div>
+</div>
+<div id="outline-container-org5952224" class="outline-3">
+<h3 id="org5952224">Problem 10.5</h3>
+<div class="outline-text-3" id="text-org5952224">
+<p>
+A rectangular wire loop with length \(a\) and width \(b\) lies in the $xy$-plane, as shown below. Within the loop there is a time-dependent magnetic field given by \(\mathbf{B}(t) = C \left( x \cos(\omega t) \, \hat{\mathbf{i}} + y \sin(\omega t) \, \hat{\mathbf{k}} \right)\), with \(\mathbf{B}(t)\) in tesla. Determine the emf induced in the loop as a function of time.
+</p>
+
+
+<div id="org4537dc5" class="figure">
+<p><img src="./img/hwC3_fig2.jpeg" alt="hwC3_fig2.jpeg" width="300px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf85827" class="outline-3">
+<h3 id="orgcf85827">Problem 10.6</h3>
+<div class="outline-text-3" id="text-orgcf85827">
+<p>
+When a magnetic field is first turned on, the flux through a 20-turn loop varies with time according to \(\Phi_m = 5.0t^2 - 2.0t\), where \(\Phi_m\) is in milliwebers, \(t\) is in seconds, and the loop is in the plane of the page with the unit normal pointing outward.
+</p>
+<ol class="org-ol">
+<li>What is the emf induced in the loop as a function of time?</li>
+<li>What is the direction of the induced current at \(t = 0\)</li>
+<li>What is the direction of the induced current at \(t = 0.10 \, \text{s}\)</li>
+<li>What is the direction of the induced current at \(t = 1.0 \, \text{s}\)</li>
+<li>What is the direction of the induced current at \(t = 2.0 \, \text{s}\)?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9f07d11" class="outline-3">
+<h3 id="org9f07d11">Problem 10.7</h3>
+<div class="outline-text-3" id="text-org9f07d11">
+<p>
+Use Lenz’s law to determine the direction of induced current in each case.
+</p>
+
+
+<div id="org47858ff" class="figure">
+<p><img src="./img/hwC3_fig3.jpeg" alt="hwC3_fig3.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeccc77c" class="outline-3">
+<h3 id="orgeccc77c">Problem 10.8</h3>
+<div class="outline-text-3" id="text-orgeccc77c">
+<p>
+A \(25 \, \text{cm}\) rod moves at \(5.0 \, \text{m/s}\) in a plane perpendicular to a magnetic field of strength \(0.25 \, \text{T}\). The rod, velocity vector, and magnetic field vector are mutually perpendicular, as indicated in the accompanying figure. Calculate
+</p>
+<ol class="org-ol">
+<li>the magnetic force on an electron in the rod</li>
+<li>the electric field in the rod</li>
+<li>the potential difference between the ends of the rod</li>
+<li>What is the speed of the rod if the potential difference is \(1.0 \, \text{V}\)?</li>
+</ol>
+
+
+<div id="org9b0cddd" class="figure">
+<p><img src="./img/hwC3_fig4.jpeg" alt="hwC3_fig4.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdb5ee5e" class="outline-3">
+<h3 id="orgdb5ee5e">Problem 10.9</h3>
+<div class="outline-text-3" id="text-orgdb5ee5e">
+<p>
+The rod shown below moves to the right on essentially zero-resistance rails at a speed of \(v = 3.0 \, \text{m/s}\). If \(B = 0.75 \, \text{T}\) everywhere in the region, what is the current through the \(5.0 \, \Omega\) resistor? Does the current circulate clockwise or counterclockwise?
+</p>
+
+
+<div id="orgc3f9d4e" class="figure">
+<p><img src="./img/hwC3_fig5.jpeg" alt="hwC3_fig5.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga4a4e48" class="outline-3">
+<h3 id="orga4a4e48">Problem 10.10</h3>
+<div class="outline-text-3" id="text-orga4a4e48">
+<p>
+Design a current loop that, when rotated in a uniform magnetic field of strength \(0.10 \, \text{T}\), will produce an emf \(\varepsilon = \varepsilon_0 \sin(\omega t)\), where \(\varepsilon_0 = 110 \, \text{V}\) and \(\omega = 120\pi \, \text{rad/s}\).
+</p>
+</div>
+</div>
+<div id="outline-container-orgccb6155" class="outline-3">
+<h3 id="orgccb6155">Problem 10.11</h3>
+<div class="outline-text-3" id="text-orgccb6155">
+<p>
+A circular loop of wire of radius \(10 \, \text{cm}\) is mounted on a vertical shaft and rotated at a frequency of \(5 \, \text{cycles per second}\) in a region of uniform magnetic field of \(2 \, \text{Gauss}\) perpendicular to the axis of rotation.
+</p>
+<ol class="org-ol">
+<li>Find an expression for the time-dependent flux through the ring.</li>
+<li>Determine the time-dependent current through the ring if it has a resistance of \(10 \, \Omega\).</li>
+</ol>
+
+
+<div id="org71fafa5" class="figure">
+<p><img src="./img/hwC3_fig6.jpeg" alt="hwC3_fig6.jpeg" width="300px" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org23b78a0" class="outline-2">
+<h2 id="org23b78a0">Homework 11: AC Circuits</h2>
+<div class="outline-text-2" id="text-org23b78a0">
+</div>
+<div id="outline-container-org201150f" class="outline-3">
+<h3 id="org201150f">Problem 11.1</h3>
+<div class="outline-text-3" id="text-org201150f">
+<p>
+An emf of \(9.7 \times 10^{-3} \, \text{V}\) is induced in a coil while the current in a nearby coil is decreasing at a rate of \(2.7 \, \text{A/s}\). What is the mutual inductance of the two coils?
+</p>
+</div>
+</div>
+<div id="outline-container-org40acb33" class="outline-3">
+<h3 id="org40acb33">Problem 11.2</h3>
+<div class="outline-text-3" id="text-org40acb33">
+<p>
+Two coils close to each other have a mutual inductance of \(32 \, \text{mH}\). If the current in one coil decays according to \(I = I_0 e^{-\alpha t}\), where \(I_0 = 5.0 \, \text{A}\) and \(\alpha = 2.0 \times 10^3 \, \text{s}^{-1}\), what is the emf induced in the second coil immediately after the current starts to decay? At \(t = 1.0 \times 10^{-3} \, \text{s}\)?
+</p>
+</div>
+</div>
+<div id="outline-container-orgb81bdf9" class="outline-3">
+<h3 id="orgb81bdf9">Problem 11.3</h3>
+<div class="outline-text-3" id="text-orgb81bdf9">
+<p>
+An emf of \(0.40 \, \text{V}\) is induced across a coil when the current through it changes uniformly from \(0.10 \, \text{A}\) to \(0.60 \, \text{A}\) in \(0.30 \, \text{s}\). What is the self-inductance of the coil?
+</p>
+</div>
+</div>
+<div id="outline-container-org8986100" class="outline-3">
+<h3 id="org8986100">Problem 11.4</h3>
+<div class="outline-text-3" id="text-org8986100">
+<p>
+A solenoid \(50 \, \text{cm}\) long is wound with \(500\) turns of wire. The cross-sectional area of the coil is \(2.0 \, \text{cm}^2\). What is the self-inductance of the solenoid?
+</p>
+</div>
+</div>
+<div id="outline-container-org297da68" class="outline-3">
+<h3 id="org297da68">Problem 11.5</h3>
+<div class="outline-text-3" id="text-org297da68">
+<p>
+For the circuit shown below, \(\varepsilon = 20 \, \text{V}\), \(L = 4.0 \, \text{mH}\), and \(R = 5.0 \, \Omega\). After steady state is reached with \(S_1\) closed and \(S_2\) open, \(S_2\) is closed and immediately thereafter (at \(t = 0\)) \(S_1\) is opened. Determine
+</p>
+<ol class="org-ol">
+<li>the current through \(L\) at \(t = 0\)</li>
+<li>the current through \(L\) at \(t = 4.0 \times 10^{-4} \, \text{s}\)</li>
+<li>the voltages across \(L\) and \(R_2\) at \(t = 4.0 \times 10^{-4} \, \text{s}\). \(R_1 = R_2 = R\).</li>
+</ol>
+
+
+<div id="org3bd982f" class="figure">
+<p><img src="./img/hwC4_fig1.jpeg" alt="hwC4_fig1.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org722527c" class="outline-3">
+<h3 id="org722527c">Problem 11.6</h3>
+<div class="outline-text-3" id="text-org722527c">
+<p>
+How long after switch \(S_1\) is thrown does it take the current in the circuit shown to reach half its maximum value? Express your answer in terms of the time constant of the circuit.
+</p>
+
+<div id="org46f03cd" class="figure">
+<p><img src="./img/hwC4_fig2.jpeg" alt="hwC4_fig2.jpeg" width="250px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f17236" class="outline-3">
+<h3 id="org5f17236">Problem 11.7</h3>
+<div class="outline-text-3" id="text-org5f17236">
+<p>
+For the circuit shown below, find the current through the inductor \(2.0 \times 10^{-5} \, \text{s}\) after the switch is reopened.
+</p>
+
+<div id="org2c5e966" class="figure">
+<p><img src="./img/hwC4_fig3.jpeg" alt="hwC4_fig3.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e124af" class="outline-3">
+<h3 id="org8e124af">Problem 11.8</h3>
+<div class="outline-text-3" id="text-org8e124af">
+<p>
+The self-inductance and capacitance of an LC circuit are \(0.20 \, \text{mH}\) and \(5.0 \, \text{pF}\). What is the angular frequency at which the circuit oscillates?
+</p>
+</div>
+</div>
+<div id="outline-container-org929f9c0" class="outline-3">
+<h3 id="org929f9c0">Problem 11.9</h3>
+<div class="outline-text-3" id="text-org929f9c0">
+<p>
+An LC circuit in an AM tuner (in a car stereo) uses a coil with an inductance of \(2.5 \, \text{mH}\) and a variable capacitor. If the natural frequency of the circuit is to be adjustable over the range \(540 \, \text{kHz}\) to \(1600 \, \text{kHz}\) (the AM broadcast band), what range of capacitance is required?
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9f5a44" class="outline-3">
+<h3 id="orgf9f5a44">Problem 11.10</h3>
+<div class="outline-text-3" id="text-orgf9f5a44">
+<p>
+Calculate the reactance of a \(5.0 \, \mu\text{F}\) capacitor at
+</p>
+<ol class="org-ol">
+<li>\(60 \, \text{Hz}\)</li>
+<li>\(600 \, \text{Hz}\)</li>
+<li>\(6000 \, \text{Hz}\)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga016f5e" class="outline-3">
+<h3 id="orga016f5e">Problem 11.11</h3>
+<div class="outline-text-3" id="text-orga016f5e">
+<p>
+Calculate the reactance of a \(5.0 \, \text{mH}\) inductor at
+</p>
+<ol class="org-ol">
+<li>\(60 \, \text{Hz}\)</li>
+<li>\(600 \, \text{Hz}\)</li>
+<li>\(6000 \, \text{Hz}\)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga3f6a57" class="outline-3">
+<h3 id="orga3f6a57">Problem 11.12</h3>
+<div class="outline-text-3" id="text-orga3f6a57">
+<p>
+What is the impedance of a series combination of a \(50 \, \Omega\) resistor, a \(5.0 \, \mu\text{F}\) capacitor, and a \(10 \, \mu\text{F}\) capacitor at a frequency of \(2.0 \, \text{kHz}\)?
+</p>
+</div>
+</div>
+<div id="outline-container-org3f8e734" class="outline-3">
+<h3 id="org3f8e734">Problem 11.13</h3>
+<div class="outline-text-3" id="text-org3f8e734">
+<p>
+In an RLC series circuit, the voltage amplitude and frequency of the source are \(100 \, \text{V}\) and \(500 \, \text{Hz}\), respectively, and \(R = 500 \, \Omega\), \(L = 0.20 \, \text{H}\), and \(C = 2.0 \, \mu\text{F}\).
+</p>
+<ol class="org-ol">
+<li>What is the impedance of the circuit?</li>
+<li>What is the amplitude of the current from the source?</li>
+<li>If the emf of the source is given by \(v(t) = (100 \, \text{V}) \sin(1000\pi t)\), how does the current vary with time?</li>
+<li>Repeat the calculations with \(C\) changed to \(0.20 \, \mu\text{F}\).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge9e3caa" class="outline-3">
+<h3 id="orge9e3caa">Problem 11.14</h3>
+<div class="outline-text-3" id="text-orge9e3caa">
+<p>
+What is the impedance of an RLC series circuit at the resonant frequency?
+</p>
+</div>
+</div>
+<div id="outline-container-org2dfe86b" class="outline-3">
+<h3 id="org2dfe86b">Problem 11.15</h3>
+<div class="outline-text-3" id="text-org2dfe86b">
+<p>
+A transformer is used to step down \(110 \, \text{V}\) from a wall socket to \(9.0 \, \text{V}\) for a radio.
+</p>
+<ol class="org-ol">
+<li>If the primary winding has \(500\) turns, how many turns does the secondary winding have?</li>
+<li>If the radio operates at a current of \(500 \, \text{mA}\), what is the current through the primary winding?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb47bc0b" class="outline-3">
+<h3 id="orgb47bc0b">Problem 11.16</h3>
+<div class="outline-text-3" id="text-orgb47bc0b">
+<p>
+Consider a power plant located \(25 \, \text{km}\) outside a town delivering \(50 \, \text{MW}\) of power to the town. The transmission lines are made of aluminum cables with a \(7 \, \text{cm}^2\) cross-sectional area. Find the loss of power in the transmission lines if it is transmitted at
+</p>
+<ol class="org-ol">
+<li>\(200 \, \text{kV}\) (rms)</li>
+<li>\(120 \, \text{V}\) (rms).</li>
+</ol>
+
+<p>
+\(~\)
+</p>
+</div>
 </div>
 </div>
 </div>
