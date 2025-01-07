@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-01-07 Tue 13:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Phy 222 Homework 8: Magnetic Fields</title>
+<meta name="author" content="Patrick Malsom" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
+</div>
+<div id="content" class="content">
+<h1 class="title">Phy 222 Homework 8: Magnetic Fields</h1>
+<div id="outline-container-org56b1642" class="outline-2">
+<h2 id="org56b1642">Problem 8.1</h2>
+<div class="outline-text-2" id="text-org56b1642">
+<p>
+What is the direction of the magnetic force on a positive charge that moves as shown in each of the six cases?
+</p>
+
+
+<div id="orgb95d335" class="figure">
+<p><img src="./img/hwC1_fig1.jpeg" alt="hwC1_fig1.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb289b95" class="outline-2">
+<h2 id="orgb289b95">Problem 8.2</h2>
+<div class="outline-text-2" id="text-orgb289b95">
+<p>
+What is the direction of the velocity of a negative charge that experiences the magnetic force shown in each of the three cases, assuming it moves perpendicular to B?
+</p>
+
+
+<div id="orgda87f06" class="figure">
+<p><img src="./img/hwC1_fig2.jpeg" alt="hwC1_fig2.jpeg" width="350px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1efecec" class="outline-2">
+<h2 id="org1efecec">Problem 8.3</h2>
+<div class="outline-text-2" id="text-org1efecec">
+<p>
+An electron is projected into a uniform magnetic field \(\mathbf{B} = (0.5\hat{i} + 0.8\hat{k}) \, \mathrm{T}\) with a velocity \(\mathbf{v} = (3.0\hat{i} + 4.0\hat{j}) \times 10^6 \, \mathrm{m/s}\). What is the magnetic force on the electron?
+</p>
+</div>
+</div>
+<div id="outline-container-org25fcf57" class="outline-2">
+<h2 id="org25fcf57">Problem 8.4</h2>
+<div class="outline-text-2" id="text-org25fcf57">
+<p>
+Four different proton velocities are given. For each case, determine the magnetic force on the proton in terms of \(e\), \(v_0\), and \(B_0\).
+</p>
+
+
+<div id="org2a34110" class="figure">
+<p><img src="./img/hwC1_fig5.jpeg" alt="hwC1_fig5.jpeg" width="300px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org198e771" class="outline-2">
+<h2 id="org198e771">Problem 8.5</h2>
+<div class="outline-text-2" id="text-org198e771">
+<p>
+Aircraft sometimes acquire small static charges. Suppose a supersonic jet has a \(0.500 \, \mu\mathrm{C}\) charge and flies due west at a speed of \(660. \, \mathrm{m/s}\) over Earth’s south magnetic pole, where the \(8.00 \times 10^{-5} \, \mathrm{T}\) magnetic field points straight down into the ground.
+</p>
+
+<ol class="org-ol">
+<li>What are the direction and the magnitude of the magnetic force on the plane?</li>
+<li>Discuss whether the value obtained above implies this is a significant or negligible effect.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd7fc827" class="outline-2">
+<h2 id="orgd7fc827">Problem 8.6</h2>
+<div class="outline-text-2" id="text-orgd7fc827">
+<p>
+A cosmic-ray electron moves at \(7.5 \times 10^6 \, \mathrm{m/s}\) perpendicular to Earth’s magnetic field at an altitude where the field strength is \(1.0 \times 10^{-5} \, \mathrm{T}\). What is the radius of the circular path the electron follows?
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb67098" class="outline-2">
+<h2 id="orgeb67098">Problem 8.7</h2>
+<div class="outline-text-2" id="text-orgeb67098">
+<p>
+An alpha-particle (\(m = 6.64 \times 10^{-27} \, \mathrm{kg}\), \(q = 3.2 \times 10^{-19} \, \mathrm{C}\)) travels in a circular path of radius \(25 \, \mathrm{cm}\) in a uniform magnetic field of magnitude \(1.5 \, \mathrm{T}\).
+</p>
+
+<ol class="org-ol">
+<li>What is the speed of the particle?</li>
+<li>What is the kinetic energy in electron-volts?</li>
+<li>Through what potential difference must the particle be accelerated in order to give it this kinetic energy?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc4cc69c" class="outline-2">
+<h2 id="orgc4cc69c">Problem 8.8</h2>
+<div class="outline-text-2" id="text-orgc4cc69c">
+<p>
+What is the direction of the magnetic force on the current in each of the six cases?
+</p>
+
+
+<div id="org33d364f" class="figure">
+<p><img src="./img/hwC1_fig3.jpeg" alt="hwC1_fig3.jpeg" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org00a6958" class="outline-2">
+<h2 id="org00a6958">Problem 8.9</h2>
+<div class="outline-text-2" id="text-org00a6958">
+<p>
+What is the direction of the magnetic field that produces the magnetic force shown on the currents in each of the three cases, assuming B  is perpendicular to I?
+</p>
+
+
+<div id="org0f860c1" class="figure">
+<p><img src="./img/hwC1_fig4.jpeg" alt="hwC1_fig4.jpeg" width="300px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf933326" class="outline-2">
+<h2 id="orgf933326">Problem 8.10</h2>
+<div class="outline-text-2" id="text-orgf933326">
+<p>
+A dc power line for a light-rail system carries \(1000 \, \mathrm{A}\) at an angle of \(30.0^\circ\) to Earth’s \(5.0 \times 10^{-5} \, \mathrm{T}\) field.
+</p>
+<ol class="org-ol">
+<li>What is the force on a \(100 \, \mathrm{m}\) section of this line?</li>
+<li>Discuss practical concerns this presents, if any.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9084486" class="outline-2">
+<h2 id="org9084486">Problem 8.11</h2>
+<div class="outline-text-2" id="text-org9084486">
+<p>
+A $150$-turn square loop of wire \(18.0 \, \mathrm{cm}\) on a side that carries a \(50.0 \, \mathrm{A}\) current in a \(1.60 \, \mathrm{T}\) field?
+</p>
+
+<ol class="org-ol">
+<li>What is the maximum torque felt by the loop?</li>
+<li>What is the torque when \(\theta\) is \(10.9^\circ\)?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8aad6b9" class="outline-2">
+<h2 id="org8aad6b9">Problem 8.12</h2>
+<div class="outline-text-2" id="text-org8aad6b9">
+<p>
+A wire of length \(1.0 \, \mathrm{m}\) is wound into a single-turn planar loop. The loop carries a current of \(5.0 \, \mathrm{A}\), and it is placed in a uniform magnetic field of strength \(0.25 \, \mathrm{T}\).
+</p>
+
+<ol class="org-ol">
+<li>What is the maximum torque that the loop will experience if it is square?</li>
+<li>If it is circular?</li>
+<li>At what angle relative to \(\mathbf{B}\) would the normal to the circular coil have to be oriented so that the torque on it would be the same as the maximum torque on the square coil?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge766f25" class="outline-2">
+<h2 id="orge766f25">Problem 8.13</h2>
+<div class="outline-text-2" id="text-orge766f25">
+<p>
+A proton has a magnetic field due to its spin. The field is similar to that created by a circular current loop of radius \(0.65 \times 10^{-15} \, \mathrm{m}\) with a current of \(1.05 \times 10^4 \, \mathrm{A}\). Find the maximum torque on a proton in a \(2.50 \, \mathrm{T}\) field. (This is a significant torque on a small particle.)
+</p>
+</div>
+</div>
+<div id="outline-container-org5e3f189" class="outline-2">
+<h2 id="org5e3f189">Problem 8.14</h2>
+<div class="outline-text-2" id="text-org5e3f189">
+<p>
+A physicist is designing a cyclotron to accelerate protons to one-tenth the speed of light. The magnetic field will have a strength of \(1.5 \, \mathrm{T}\). Determine
+</p>
+
+<ol class="org-ol">
+<li>the rotational period of the circulating protons.</li>
+<li>the maximum radius of the protons’ orbit.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org60d5912" class="outline-2">
+<h2 id="org60d5912">Problem 8.15</h2>
+<div class="outline-text-2" id="text-org60d5912">
+<p>
+The magnetic field in a cyclotron is \(1.25 \, \mathrm{T}\), and the maximum orbital radius of the circulating protons is \(0.40 \, \mathrm{m}\).
+</p>
+<ol class="org-ol">
+<li>What is the kinetic energy of the protons when they are ejected from the cyclotron?</li>
+<li>What is this energy in \(\mathrm{MeV}\)?</li>
+<li>Through what potential difference would a proton have to be accelerated to acquire this kinetic energy?</li>
+<li>What is the period of the voltage source used to accelerate the protons?</li>
+<li>Repeat the calculations for alpha-particles.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org2635fad" class="outline-2">
+<h2 id="org2635fad">Problem 8.16</h2>
+<div class="outline-text-2" id="text-org2635fad">
+<p>
+A velocity selector in a mass spectrometer uses a \(0.100 \, \mathrm{T}\) magnetic field.
+</p>
+
+<ol class="org-ol">
+<li>What electric field strength is needed to select a speed of \(4.0 \times 10^6 \, \mathrm{m/s}\)?</li>
+<li>What is the voltage between the plates if they are separated by \(1.00 \, \mathrm{cm}\)?</li>
+</ol>
+
+<p>
+\(~\)
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
