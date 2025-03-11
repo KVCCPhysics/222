@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-10 Mon 22:17 -->
+<!-- 2025-03-10 Mon 22:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>KVCC Physics 222</title>
+<title>Phy222 Practice Exam2</title>
 <meta name="author" content="Patrick Malsom" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -193,114 +193,150 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">KVCC Physics 222</h1>
-<div id="outline-container-org67aec69" class="outline-2">
-<h2 id="org67aec69">Class Resources</h2>
-<div class="outline-text-2" id="text-org67aec69">
-<ul class="org-ul">
-<li><a href="./Phy222-Module0.html">Course Overview</a></li>
-<li><a href="./Phy222-UnitA-EField.html">Unit A: Electric Field</a></li>
-<li><a href="./Phy222-UnitB-Circuits.html">Unit B: Circuits</a></li>
-<li><a href="./Phy222-UnitC-BField.html">Unit C: Magnetic Field</a></li>
-<li><a href="./Phy222-UnitD-Light.html">Unit D: Light</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org5e4e931" class="outline-2">
-<h2 id="org5e4e931">Homework</h2>
-<div class="outline-text-2" id="text-org5e4e931">
-</div>
-<div id="outline-container-orgf3ff388" class="outline-3">
-<h3 id="orgf3ff388">Electric Fields</h3>
-<div class="outline-text-3" id="text-orgf3ff388">
-<ul class="org-ul">
-<li><a href="./Phy222-Homework01.html">Homework 1: Electric Field</a></li>
-<li><a href="./Phy222-Homework02.html">Homework 2: Continuous Charge Distribution</a></li>
-<li><a href="./Phy222-Homework03.html">Homework 3: Gauss Law</a></li>
-<li><a href="./Phy222-Homework04.html">Homework 4: Electric Potential</a></li>
-<li><a href="./Phy222-practiceExam1.html">Practice Exam 1</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org073b96b" class="outline-3">
-<h3 id="org073b96b">Circuits</h3>
-<div class="outline-text-3" id="text-org073b96b">
-<ul class="org-ul">
-<li><a href="./Phy222-Homework05.html">Homework 5: Capacitor</a></li>
-<li><a href="./Phy222-Homework06.html">Homework 6: Current and Resistance</a></li>
-<li><a href="./Phy222-Homework07.html">Homework 7: DC Circuits</a></li>
-<li><a href="./Phy222-practiceExam2.html">Practice Exam 2</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org1ff860d" class="outline-3">
-<h3 id="org1ff860d">Magnetic Fields</h3>
-<div class="outline-text-3" id="text-org1ff860d">
-<ul class="org-ul">
-<li><a href="./Phy222-Homework08.html">Homework 8: Magnetic Field</a></li>
-<li><a href="./Phy222-Homework09.html">Homework 9: Continuous Current Distribution</a></li>
-<li><a href="./Phy222-Homework00.html">Homework 10: Induction</a></li>
-<li><a href="./Phy222-Homework11.html">Homework 11: Ac Circuits</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org79ca1b9" class="outline-3">
-<h3 id="org79ca1b9">Light</h3>
-<div class="outline-text-3" id="text-org79ca1b9">
-<ul class="org-ul">
-<li><a href="./Phy222-Homework12.html">Homework 12: Light</a></li>
-<li><a href="./Phy222-Homework13.html">Homework 13: Ray Optics</a></li>
-<li><a href="./Phy222-Homework14.html">Homework 14: Wave Optics</a></li>
-</ul>
+<h1 class="title">Phy222 Practice Exam2</h1>
+<div id="outline-container-orgacc2f99" class="outline-2">
+<h2 id="orgacc2f99">Problem 1:</h2>
+<div class="outline-text-2" id="text-orgacc2f99">
+<p>
+A resistor is constructed by forming a material of resistivity \(4.50~\Omega \cdot m\) into the shape of a cylinder. This cylinder has a length of \(3.5~cm\) and outer and radius of \(1.24~cm\). Multiple of these resistors are then configured as shown below:
+</p>
+
+<ol class="org-ol">
+<li>What is the resistance of the cylinder?</li>
+<li>How much energy is delivered to a single resistor when connected to a 1.5V AA battery for 5 seconds?</li>
+<li>What is the equivalent resistance of the circuit?</li>
+<li>what is the equivalent resistance if another resistor was placed between points A and B/</li>
+<li>what is the equivalent resistance if a wire were placed between A and C?</li>
+</ol>
+
+
+<div id="orgbf9ee4e" class="figure">
+<p><img src="./img/pe2_fig1.png" alt="pe2_fig1.png" width="550px" />
+</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org9dd3e58" class="outline-2">
-<h2 id="org9dd3e58">Laboratory Experiments</h2>
-<div class="outline-text-2" id="text-org9dd3e58">
-</div>
-<div id="outline-container-org19e8cbb" class="outline-3">
-<h3 id="org19e8cbb">Electric Fields</h3>
-<div class="outline-text-3" id="text-org19e8cbb">
-<ul class="org-ul">
-<li><a href="./Phy222-Lab1-EField.html">Lab 1 - Electric Field</a></li>
-<li><a href="./Phy222-Lab2-Gauss.html">Lab 2 - Gauss&rsquo;s Law</a></li>
-<li><a href="./Phy222-Lab3-EPotential.html">Lab 3 - Electric Potential</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgfabebb0" class="outline-3">
-<h3 id="orgfabebb0">Circuits</h3>
-<div class="outline-text-3" id="text-orgfabebb0">
-<ul class="org-ul">
-<li><a href="./Phy222-Lab4-DCcircuit.html">Lab 4 - DC Circuits</a></li>
-<li><a href="./Phy222-Lab5-RCcircuit.html">Lab 5 - RC Circuits</a></li>
-</ul>
+<div id="outline-container-orgd408788" class="outline-2">
+<h2 id="orgd408788">Problem 2:</h2>
+<div class="outline-text-2" id="text-orgd408788">
+<p>
+A capacitor is created from two sheets of metal which measure \(0.1~m\) on each side. One sheet is then charged with\(300 \mu C\) of charge and the other with \(- 300\mu C\) of charge.
+</p>
+
+<ol class="org-ol">
+<li>Calculate the voltage across the capacitor if the plates are separated by \(1~mm\)</li>
+<li>Calculate the voltage across the capacitor if the plates are separated by \(1~\mu m\)</li>
+<li>Calculate the voltage if a plastic film dielectric with \(\kappa = 5.5\) and thickness of \(1~\mu m\) is sandwiched between the plates.</li>
+</ol>
+
+
+<div id="org23d79b3" class="figure">
+<p><img src="./img/pe2_fig2.png" alt="pe2_fig2.png" width="250px" />
+</p>
 </div>
 </div>
-<div id="outline-container-orga9c90e9" class="outline-3">
-<h3 id="orga9c90e9">Magnetic Fields</h3>
-<div class="outline-text-3" id="text-orga9c90e9">
-<ul class="org-ul">
-<li><a href="./Phy222-Lab6-BField.html">Lab 6 - Magnetic Field</a></li>
-<li><a href="./Phy222-Lab7-Induction.html">Lab 7 - Induction</a></li>
-<li><a href="./Phy222-Lab8-RLcircuit.html">Lab 8 - RL Circuits</a></li>
-</ul>
+</div>
+<div id="outline-container-org1eb4c50" class="outline-2">
+<h2 id="org1eb4c50">Problem 3:</h2>
+<div class="outline-text-2" id="text-org1eb4c50">
+<p>
+Capacitors are set up in the below arrangements with \(C_1=10\mu C\), \(C_2=20\mu C\), \(C_3=15\mu C\), and \(C_4=5\mu C\).
+</p>
+
+<ol class="org-ol">
+<li>Calculate the equivalent capacitance of each circuit</li>
+<li>Calculate the voltage and charge on each capacitor</li>
+</ol>
+
+
+<div id="orga5a7b90" class="figure">
+<p><img src="./img/pe2_fig3.png" alt="pe2_fig3.png" width="350px" />
+</p>
 </div>
 </div>
-<div id="outline-container-org3e3aff2" class="outline-3">
-<h3 id="org3e3aff2">Light</h3>
-<div class="outline-text-3" id="text-org3e3aff2">
-<ul class="org-ul">
-<li><a href="./Phy222-Lab9-Lenses.html">Lab 9 - Lenses</a></li>
-<li><a href="./Phy222-Lab10-WaveOptics.html">Lab 10 - Wave Optics</a></li>
-</ul>
+</div>
+<div id="outline-container-org1b1b866" class="outline-2">
+<h2 id="org1b1b866">Problem 4:</h2>
+<div class="outline-text-2" id="text-org1b1b866">
+<p>
+Two circuits are shown below
+</p>
+
+<ol class="org-ol">
+<li>Pick a direction for currents and loops in each circuit.</li>
+<li>Write Kirkhoffs junction and loop laws for the circuit.
+note: I will not ask you to solve the equations during the exam. Pay careful attention to plus and minus signs.</li>
+</ol>
+
+
+<div id="orgfb1563d" class="figure">
+<p><img src="./img/pe2_fig4a.png" alt="pe2_fig4a.png" width="350px" />
+</p>
+</div>
+
+
+<div id="org734c123" class="figure">
+<p><img src="./img/pe2_fig4b.png" alt="pe2_fig4b.png" width="350px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org12cfca3" class="outline-2">
+<h2 id="org12cfca3">Problem 5:</h2>
+<div class="outline-text-2" id="text-org12cfca3">
+<p>
+A circuit is created by placing a capacitors and resistors in the circuit shown below. Each capacitor has \(C=10~ \mu F\) and each resistor has \(R=10k \Omega\).
+</p>
+
+<ol class="org-ol">
+<li>Calculate the time constant for the circuit</li>
+<li>Find the charge on each individual capacitor after 0.15 seconds</li>
+<li>Find the current flowing thru the capacitor after 0.15 seconds</li>
+<li>Find the current flowing thru the resistor after 0.15 seconds</li>
+</ol>
+
+
+<div id="org1907898" class="figure">
+<p><img src="./img/pe2_fig5.png" alt="pe2_fig5.png" width="350px" />
+</p>
 </div>
 </div>
 </div>
