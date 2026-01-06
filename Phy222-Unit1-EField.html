@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-27 Thu 13:49 -->
+<!-- 2026-01-06 Tue 11:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Phy 222 Homework 6: Current and Resistance</title>
+<title>Unit A - Electric Field</title>
 <meta name="author" content="Patrick Malsom" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -193,137 +193,21 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<script>
-  window.MathJax = {
-    tex: {
-      ams: {
-        multlineWidth: '85%'
-      },
-      tags: 'ams',
-      tagSide: 'right',
-      tagIndent: '.8em'
-    },
-    chtml: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    svg: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    output: {
-      font: 'mathjax-modern',
-      displayOverflow: 'overflow'
-    }
-  };
-</script>
-
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">Phy 222 Homework 6: Current and Resistance</h1>
-<div id="outline-container-orgf098c11" class="outline-2">
-<h2 id="orgf098c11">Problem 6.1</h2>
-<div class="outline-text-2" id="text-orgf098c11">
-<p>
-An aluminum wire \(1.628 \, \text{mm}\) in diameter (14-gauge) carries a current of \(3.00 \, \text{A}\) (look up density and molar masses, and assume each atom contributes one free electron):
-</p>
-<ol class="org-ol">
-<li>What is the absolute value of the charge density in the wire?</li>
-<li>What is the drift velocity of the electrons?</li>
-<li>What would be the drift velocity if the same gauge copper were used instead of aluminum?</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-orgb31ba7d" class="outline-2">
-<h2 id="orgb31ba7d">Problem 6.2</h2>
-<div class="outline-text-2" id="text-orgb31ba7d">
-<p>
-Consider a wire of circular cross-section with a radius of \(R = 3.00 \, \text{mm}\). The current density is modeled as \(J = c r^2\) where \(c = 5.00 \times 10^6 \, \text{A/m}^4\). What is the current through the inner section of the wire from the center to \(r = 0.5R\)?
-</p>
-</div>
-</div>
-<div id="outline-container-org367694a" class="outline-2">
-<h2 id="org367694a">Problem 6.3</h2>
-<div class="outline-text-2" id="text-org367694a">
-<p>
-Calculate the effective resistance of a pocket calculator that has a \(1.35 \, \text{V}\) battery and through which \(0.200 \, \text{mA}\) flows.
-</p>
-</div>
-</div>
-<div id="outline-container-org7fe2186" class="outline-2">
-<h2 id="org7fe2186">Problem 6.4</h2>
-<div class="outline-text-2" id="text-org7fe2186">
-<p>
-The diameter of $0$-gauge copper wire is \(8.252 \, \text{mm}\). Find the resistance of a \(1.00 \, \text{km}\) length of such wire used for power transmission.
-</p>
-</div>
-</div>
-<div id="outline-container-org40c4652" class="outline-2">
-<h2 id="org40c4652">Problem 6.5</h2>
-<div class="outline-text-2" id="text-org40c4652">
-<p>
-A wire is \(25.0 \, \text{m}\) long with a diameter of \(0.100 \, \text{mm}\) and has a resistance of \(77.7 \, \Omega\) at \(20.0^\circ\text{C}\).
-</p>
-<ol class="org-ol">
-<li>Of what material is the wire made?</li>
-<li>What is its resistance at \(150.0^\circ\text{C}\)?</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org57c3b41" class="outline-2">
-<h2 id="org57c3b41">Problem 6.6</h2>
-<div class="outline-text-2" id="text-org57c3b41">
-<p>
-A \(2.2 \, \text{k}\Omega\) resistor is connected across a D cell battery (\(1.5 \, \text{V}\)). What is the current through the resistor?
-</p>
-</div>
-</div>
-<div id="outline-container-orgc3e37aa" class="outline-2">
-<h2 id="orgc3e37aa">Problem 6.7</h2>
-<div class="outline-text-2" id="text-orgc3e37aa">
-<p>
-A heater is being designed that uses a coil of 14-gauge nichrome wire to generate \(300 \, \text{W}\) using a voltage of \(V = 110 \, \text{V}\). How long should the engineer make the wire?
-</p>
-</div>
-</div>
-<div id="outline-container-org6eddd29" class="outline-2">
-<h2 id="org6eddd29">Problem 6.8</h2>
-<div class="outline-text-2" id="text-org6eddd29">
-<p>
-An alternative to CFL bulbs and incandescent bulbs are light-emitting diode (LED) bulbs. A \(100 \, \text{W}\) incandescent bulb can be replaced by a \(16 \, \text{W}\) LED bulb, both producing \(1600 \, \text{lumens}\) of light. Assuming the cost of electricity is \(0.10 \, \text{per kWh}\), how much does it cost to run the bulb for one year if it runs for four hours a day?
-</p>
-</div>
-</div>
-<div id="outline-container-org70b152e" class="outline-2">
-<h2 id="org70b152e">Problem 6.9</h2>
-<div class="outline-text-2" id="text-org70b152e">
-<p>
-Coils are often used in electrical and electronic circuits. Consider a coil formed by winding \(1000\) turns of insulated $20$-gauge copper wire (area \(0.52 \, \text{mm}^2\)) in a single layer on a cylindrical non-conducting core of radius \(2.0 \, \text{mm}\). What is the resistance of the coil? Neglect the thickness of the insulation.
-</p>
-
-
-<p>
-\(~\)
-</p>
-</div>
-</div>
-<div id="outline-container-org942a144" class="outline-2">
-<h2 id="org942a144">Solutions</h2>
-<div class="outline-text-2" id="text-org942a144">
-<p>
-<a href="./img/222-hw6.pdf">./img/222-hw6.pdf</a>
-</p>
+<h1 class="title">Unit A - Electric Field</h1>
+<div id="outline-container-org542b7b5" class="outline-2">
+<h2 id="org542b7b5">Textbook - OpenStax University Physics Volume 2:</h2>
+<div class="outline-text-2" id="text-org542b7b5">
+<ul class="org-ul">
+<li><a href="https://openstax.org/books/university-physics-volume-2/pages/5-introduction">Vol2 Ch5 - Electric Fields (external link)</a></li>
+<li><a href="https://openstax.org/books/university-physics-volume-2/pages/6-introduction">Vol2 Ch6 - Gauss&rsquo;s Law (external link)</a></li>
+<li><a href="https://openstax.org/books/university-physics-volume-2/pages/7-introduction">Vol2 Ch7 - Electric Potential (external link)</a></li>
+</ul>
 </div>
 </div>
 </div>
